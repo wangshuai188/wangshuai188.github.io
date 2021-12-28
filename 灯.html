@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .img {
+            overflow: hidden;
+            height: 200px;
+            width: 110px;
+            /* background-color: aqua; */
+            margin: 20px auto;
+        }
+        img {
+            position: absolute;
+        }
+        .open {
+            display: none;
+        }
+        button {
+            
+            display: block;
+            margin: 20px auto;
+        }
+            
+    </style>
+</head>
+<body>
+    <div class="out">
+        <div class="img">
+            <img src="./img/关.png" alt="" class="off">
+            <img src="./img/开.png" alt="" class="open">
+        </div>
+        <button>点击开/关灯</button>
+
+        <script>
+            var off = document.querySelector('.off');
+            var open = document.querySelector('.open');
+            var btn = document.querySelector('button');
+            var flag = 1;
+            btn.addEventListener('click', function() {
+                if (flag) {
+                    open.style.display = 'block';
+                    flag = 0;
+                } else {
+                    open.style.display = 'none';
+                    flag = 1
+                }
+            })
+        </script>
+
+    </div>
+</body>
+</html>
